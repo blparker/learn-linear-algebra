@@ -11,3 +11,6 @@ This repository contains a series of [Jupyter Notebooks](https://jupyter.org/) t
 5. Solving Systems of Linear Equations
 
 More to be added soon.
+
+## Feedback and Errata
+I'm open to feedback, so please don't hesitate to reach out if there is something that is confusing, could be expanded on, or is flat out wrong. Errata can be managed by creating Github issues or by sending them to bryan@bryan.blog.
