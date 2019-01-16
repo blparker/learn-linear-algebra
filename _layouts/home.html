@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.guides.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Guides" }}</h2>
+    <ul class="post-list">
+      {%- for guide in site.guides -%}
+      <li>
+        <a class="post-link" href="{{ guide.url | relative_url }}">
+          {{ guide.title | escape }}
+        </a>
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  {%- endif -%}
+
+</div>
