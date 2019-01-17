@@ -29,9 +29,7 @@ $$\begin{bmatrix}1 \\ 2\end{bmatrix}$$
 And try to visualize it. When thinking about a vector geometrically, we allow the components to be a simple point in the coordinate system. Since the vector above has 2 components, we can visualize it in the X-Y plane by allowing the first component, `1`, to be the X-coordinate and the second component, `2`, to be the Y-coordinate:
 
 
-```python
 
-```
 
 
 ![png](outputs/Vectors_attach_2_image.png)
@@ -66,9 +64,7 @@ $$\begin{bmatrix}1 \\ 2\end{bmatrix}, \begin{bmatrix}2 \\ 1\end{bmatrix}$$
 Clearly, the components are different, but let's visualize them:
 
 
-```python
 
-```
 
 
 ![png](outputs/Vectors_attach_5_image.png)
@@ -79,9 +75,7 @@ You can see that the vectors are clearly pointing in different directions even t
 $$\begin{bmatrix}2 \\ 2\end{bmatrix}, \begin{bmatrix}4 \\ 4\end{bmatrix}$$
 
 
-```python
 
-```
 
 
 ![png](outputs/Vectors_attach_7_image.png)
@@ -92,9 +86,7 @@ They are pointing in the same direction, but the blue vector is twice as long as
 An important thing to call out is that magnitude can be different without affecting direction and vice versa as was demonstrated above. Or, they can both be different:
 
 
-```python
 
-```
 
 
 ![png](outputs/Vectors_attach_9_image.png)
@@ -123,9 +115,11 @@ Okay, now that we understand how a vector is represented with a symbol, let's se
 $$\vec{v} = \begin{bmatrix}1 \\ 2\end{bmatrix}$$
 
 
+
 ```python
 v = [1, 2]
 ```
+
 
 To keep things simple, we can easily represent a vector as a simple list. In the future, we may choose to represent the vector as a class, but for now, let's keep it simple.
 
@@ -155,9 +149,7 @@ $$\begin{bmatrix}1 \\ 2\end{bmatrix} + \begin{bmatrix}2 \\ 1\end{bmatrix} = \beg
 Following the steps from above, we arrived at a resulting vector of $\begin{bmatrix}3 \\ 3\end{bmatrix}$. It's helpful to visualize this addition by visualizing the vectors geometrically. Below, the red arrow represents the vector $\begin{bmatrix}1 \\ 2\end{bmatrix}$ and the blue arrow represents the vector $\begin{bmatrix}2 \\ 1\end{bmatrix}$. The magenta arrow represents the vector $\begin{bmatrix}3 \\ 3\end{bmatrix}$ which is the result of adding the the 2 vectors.
 
 
-```python
 
-```
 
 
 ![png](outputs/Vectors_attach_16_image.png)
@@ -183,9 +175,7 @@ $$\begin{bmatrix}1 \\ 2\end{bmatrix} + \begin{bmatrix}2 \\ 1\end{bmatrix} = \beg
 We still arrive at the same result no matter which comes first. If we plot $\begin{bmatrix}2 \\ 1\end{bmatrix}$ first and then add $\begin{bmatrix}1 \\ 2\end{bmatrix}$, as expected, the addition still takes us to the same resulting vector:
 
 
-```python
 
-```
 
 
 ![png](outputs/Vectors_attach_18_image.png)
@@ -212,9 +202,7 @@ $$\begin{bmatrix}3 \\ 5\end{bmatrix} + \begin{bmatrix}-2 \\ -2\end{bmatrix} = \b
 Verbalized, this is equivalent to traveling 3 units to the right, 5 units up (to get to $\begin{bmatrix}3 \\ 5\end{bmatrix}$) followed by 2 units to the left and 2 units down (equivalent to $\begin{bmatrix}-2 \\ -2\end{bmatrix}$). Below, the red vector is $\begin{bmatrix}3 \\ 5\end{bmatrix}$ and the blue vector is $\begin{bmatrix}2 \\ 2\end{bmatrix}$ (or $\begin{bmatrix}-2 \\ -2\end{bmatrix}$ viewed as negative addition):
 
 
-```python
 
-```
 
 
 ![png](outputs/Vectors_attach_21_image.png)
@@ -232,9 +220,7 @@ $$3 * \begin{bmatrix}1 \\ 2\end{bmatrix} = \begin{bmatrix}1 \\ 2\end{bmatrix} + 
 Geometrically, this can be thought of as stretching or shrinking the vector (depending on what the scalar number is). The plot on the left is the result of multiplying each component by 3 and the plot on the right is the concept of repeated addition. Using what we know about addition from above, you can visualize scalar multiplication as lining up 3 copies of the vector $\begin{bmatrix}1 \\ 2\end{bmatrix}$ end-to-end. The key takeaway is that of the fact that the resulting vector is simply a scaled version of the original vector.
 
 
-```python
 
-```
 
 
 ![png](outputs/Vectors_attach_23_image.png)
@@ -329,9 +315,7 @@ $$\begin{bmatrix}2 \\ 1\end{bmatrix} - \begin{bmatrix}1 \\ 3\end{bmatrix} = \beg
 The result contains a negative component. This can be visualized as:
 
 
-```python
 
-```
 
 
 ![png](outputs/Vectors_attach_30_image.png)
@@ -341,6 +325,7 @@ The result contains a negative component. This can be visualized as:
 Above, I mentioned that vectors have a length (called _magnitude_), but we don't know how to find it yet. It's often useful to find "how long" a vector is and we do this by using the components of the vector. Fortunately, finding the length of a vector is as easy as using the Pythagorean theorem. For example, for a vector with 2 components, we can form a right triangle with the $x$ and $y$ components and calculate the length as the hypotenuse. For instance, we can find the length of the following vector:
 
 $$\vec{v} = \begin{bmatrix}1 \\ 3\end{bmatrix}$$
+
 
 
 ```python
@@ -358,6 +343,7 @@ annotate('b', xy=(0.9, 1.5), ha='right', color='red')
 annotate('c', xy=(0.3, 1.5), ha='right', color='red')
 show()
 ```
+
 
 
 ![png](outputs/Vectors_attach_32_image.png)
@@ -391,9 +377,7 @@ When we draw vectors geometrically using the components to represent axes in the
 All of the vectors drawn above are drawn in _standard form_ (starting from the origin). This is a matter of convenience. There are no rules that require vectors to be drawn in standard form. The 2 important characteristics of vectors are that they have a certain magnitude and a certain direction. In fact, the following two vectors representing $\begin{bmatrix}1 \\ 2\end{bmatrix}$ are identical:
 
 
-```python
 
-```
 
 
 ![png](outputs/Vectors_attach_36_image.png)
@@ -427,6 +411,7 @@ Okay, that's a lot. Let's take the concepts we've learned so far and see how we 
 $$\vec{a}=\begin{bmatrix}1 \\ 2\end{bmatrix}, \vec{b}=\begin{bmatrix}3 \\ 4\end{bmatrix}$$
 
 
+
 ```python
 # Some boilerplate code
 from functools import reduce
@@ -437,13 +422,17 @@ def v_to_str(v):
 ```
 
 
+
+
 ```python
 # Define vectors a and b
 a = [1, 2]
 b = [3, 4]
 ```
 
+
 Let's create a method to report the size of a vector, which as you recall is just the number of components in the vector:
+
 
 
 ```python
@@ -457,10 +446,12 @@ a_size = size(a)  # Should be 2
 print('Size of %s = %d' % (v_to_str(a), a_size))
 ```
 
+
     Size of [1, 2] = 2
 
 
 Next, let's work on addition and subtraction of vectors:
+
 
 
 ```python
@@ -479,11 +470,13 @@ print('%s + %s = %s' % (v_to_str(a), v_to_str(b), v_to_str(a_plus_b)))
 print('%s - %s = %s' % (v_to_str(a), v_to_str(b), v_to_str(a_minus_b)))
 ```
 
+
     [1, 2] + [3, 4] = [4, 6]
     [1, 2] - [3, 4] = [-2, -2]
 
 
 Finally, scalar multiplication. Recall above that multiplication can be seen as multiplying each component by a scalar number or repeated addition, so I've included both:
+
 
 
 ```python
@@ -503,11 +496,13 @@ print('%s * %s = %s' % (scalar, v_to_str(a), v_to_str(a_times_3)))
 print('%s * %s = %s' % (scalar, v_to_str(a), v_to_str(a_times_3_repeated_addition)))
 ```
 
+
     3 * [1, 2] = [3, 6]
     3 * [1, 2] = [3, 6]
 
 
 To demonstrate that these operations are not limited to vectors of size 2, here are a few examples using vectors with more components:
+
 
 
 ```python
@@ -524,12 +519,14 @@ print('%s - %s = %s' % (v_to_str(a4), v_to_str(b4), v_to_str(a4_minus_b4)))
 print('%s * %s = %s' % ('3', v_to_str(a4), v_to_str(a4_times_3)))
 ```
 
+
     [1, 2, 3, 4] + [2, 0, 1, 3] = [3, 2, 4, 7]
     [1, 2, 3, 4] - [2, 0, 1, 3] = [-1, 2, 2, 1]
     3 * [1, 2, 3, 4] = [3, 6, 9, 12]
 
 
 Let's see how we can find the length/magnitude of a vector:
+
 
 
 ```python
@@ -551,12 +548,14 @@ print('Magnitude of %s = %f' % (v_to_str(a4), a4_length))
 print('Magnitude of %s = %d' % (v_to_str(other), other_length))
 ```
 
+
     Magnitude of [1, 2] = 2.236068
     Magnitude of [1, 2, 3, 4] = 5.477226
     Magnitude of [3, 4] = 5
 
 
 Putting together all the pieces:
+
 
 
 ```python
@@ -626,6 +625,7 @@ print('%s + %s = %s' % (v_to_str(a4), v_to_str(b4), v_to_str(a4_plus_b4)))
 print('%s - %s = %s' % (v_to_str(a4), v_to_str(b4), v_to_str(a4_minus_b4)))
 print('%s * %s = %s' % ('3', v_to_str(a4), v_to_str(a4_times_3)))
 ```
+
 
     Size of [1, 2] = 2
     [1, 2] + [3, 4] = [4, 6]
