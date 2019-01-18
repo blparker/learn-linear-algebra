@@ -16,17 +16,17 @@ When talking about concepts, we tend to create symbols to represent these concep
 
 $$\begin{bmatrix}v_1 \\ v_2 \\ \dots \\ v_i\end{bmatrix}$$
 
-Where $v_1, v_2, \dots v_i$ are real numbers. An example of a vector with 2 numbers:
+Where $v_1, v_2, \dots v_i$ are real numbers. As you can see, a vector is a just a list with a certain number of numbers. For example, here is a vector with 2 numbers:
 
-$$\begin{bmatrix}1 \\ 2\end{bmatrix}$$
+$$\begin{bmatrix}5 \\ 2\end{bmatrix}$$
 
 Vectors (and matrices as we'll see later) are represented as a list of numbers surrounded by square brackets. Each number in the vector is commonly called a **component** or **element**.
 
-A common way to understand a concept like vectors is to visualize it somehow. We can easily visualize vectors by viewing them geometrically and plotting them in a coordinate system. For example, let's take the vector above:
+A common way to understand a concept like vectors is to visualize it somehow. We can easily visualize vectors by viewing them geometrically and plotting them in a coordinate system. For example, let's take the following vector:
 
 $$\begin{bmatrix}1 \\ 2\end{bmatrix}$$
 
-And try to visualize it. When thinking about a vector geometrically, we allow the components to be a simple point in the coordinate system. Since the vector above has 2 components, we can visualize it in the X-Y plane by allowing the first component, `1`, to be the X-coordinate and the second component, `2`, to be the Y-coordinate:
+And try to visualize it. We can think about a vector geometrically by allowing the components to be a simple point in the coordinate system. Since the vector above has 2 components, we can visualize it in the X-Y plane by allowing the first component, `1`, to be the X-coordinate and the second component, `2`, to be the Y-coordinate:
 
 
 
@@ -70,7 +70,7 @@ Clearly, the components are different, but let's visualize them:
 ![png](outputs/Vectors_attach_5_image.png)
 
 
-You can see that the vectors are clearly pointing in different directions even though they look the same length. Because these vectors point in a different _direction_, they are completely different vectors. Similarly, vectors can point in the same direction, but have a a different _magnitude_ (i.e., length). Consider the following 2 vectors:
+You can see that the vectors are clearly pointing in different directions even though they look the same length. Because these vectors point in a different _direction_, they are completely different vectors. Similarly, vectors can point in the same direction, but have a different _magnitude_ (i.e., length). Consider the following 2 vectors:
 
 $$\begin{bmatrix}2 \\ 2\end{bmatrix}, \begin{bmatrix}4 \\ 4\end{bmatrix}$$
 
@@ -96,7 +96,7 @@ These 2 vectors are pointing in different directions _and_ have different length
 
 ## Representing vectors
 
-Now that we have an idea of what a vector is, let's see how we can represent it. In algebra, we can allow a symbol to represent a variable that is real number (oftentimes called a **scalar**):
+Now that we have an idea of what a vector is, let's see how we can represent it. In algebra, we can allow a symbol to represent a variable that is a real number (oftentimes called a **scalar**):
 
 $$x = 5$$
 
@@ -121,12 +121,11 @@ v = [1, 2]
 ```
 
 
-To keep things simple, we can easily represent a vector as a simple list. In the future, we may choose to represent the vector as a class, but for now, let's keep it simple.
+To keep things simple, we can easily represent a vector as a simple Python list. In the future, we may choose to represent the vector as a class, but for now, let's keep it simple.
 
 ## Operating on vectors
 
-Vectors wouldn't be all that interesting if we couldn't do anything with them. An interesting thing about vectors is that they behave a lot like regular numbers. In fact, that's where the _algebra_ in linear algebra comes from. You can use many of the same algebraic operations you learned in grade school in linear algebra, but instead of simple numbers, you use vectors instead.
-
+Vectors wouldn't be all that interesting if we couldn't do anything with them. An interesting thing about vectors is that they behave a lot like regular numbers. Fortunately, you can use many of the same algebraic operations you learned in grade school in linear algebra, but instead of simple numbers, you use vectors instead.
 
 ### Vector addition
 
@@ -208,7 +207,7 @@ Verbalized, this is equivalent to traveling 3 units to the right, 5 units up (to
 ![png](outputs/Vectors_attach_21_image.png)
 
 
-### Scalar multiplication of vector
+### Scalar multiplication of a vector
 You can multiply a number and a vector. Scalar multiplication is performed by multiplying each component in the vector by the scalar:
 
 $$3 * \begin{bmatrix}1 \\ 2\end{bmatrix} = \begin{bmatrix}3 * 1 \\ 3 * 2\end{bmatrix} = \begin{bmatrix}3 \\ 6\end{bmatrix}$$
@@ -226,8 +225,8 @@ Geometrically, this can be thought of as stretching or shrinking the vector (dep
 ![png](outputs/Vectors_attach_23_image.png)
 
 
-### Scalar division of vector
-You usually won't find references to scalar division in resources, but for sake of completeness, I'm including it here. Dividing a vector by a scalar $s$ can simply be viewed as scalar multiplication with the scalar being $\frac{1}{s}$:
+### Scalar division of a vector
+You usually won't find references to scalar division in resources, but for sake of completeness, I'm including it here. You technically _can't_ divide a vector, but you can sort of imagine dividing a vector by a scalar $s$ as scalar multiplication with the scalar being $\frac{1}{s}$:
 
 $$\begin{bmatrix}2 \\ 4\end{bmatrix} \div 2 = \frac{1}{2}*\begin{bmatrix}2 \\ 4\end{bmatrix} = \begin{bmatrix}1 \\ 2\end{bmatrix}$$
 
@@ -260,7 +259,7 @@ We perform the multiplication first then the addition.
 
 ## Linear combinations
 
-Above we showed that we can multiply a vector $\vec{v}$ by a scalar component $c$:
+Above we showed that we can multiply a vector $\vec{v}$ by a scalar number $c$:
 
 $$
 \vec{v} = \begin{bmatrix}v_1 \\ v_2 \\ \dots \\ v_i\end{bmatrix}, \enspace\enspace c\vec{v} = c\begin{bmatrix}v_1 \\ v_2 \\ \dots \\ v_i\end{bmatrix} = \begin{bmatrix}cv_1 \\ cv_2 \\ \dots \\ cv_i\end{bmatrix}
@@ -273,29 +272,29 @@ $$
 \vec{u} + \vec{v} = \begin{bmatrix}u_1 + v_1 \\ u_2 + v_2 \\ \dots \\ u_i + v_i\end{bmatrix}
 $$
 
-We can combine these 2 operations into one step called a **linear combination**:
+We can combine these 2 operations into one step called a **linear combination**. Let's create a linear combination with the above vectors $\vec{u}$ and $\vec{v}$ and scalar numbers $c$ and $d$:
 
 $$
 \vec{u} = \begin{bmatrix}u_1 \\ u_2 \\ \dots \\ u_i\end{bmatrix}, \vec{v} = \begin{bmatrix}v_1 \\ v_2 \\ \dots \\ v_i\end{bmatrix}, \enspace\enspace
 c\vec{u} + d\vec{v} = \begin{bmatrix}cu_1 + dv_1 \\ cu_2 + dv_2 \\ \dots \\ cu_i + dv_i\end{bmatrix}
 $$
 
-Let's take an example by finding the linear combination of the two vectors $\vec{u}$ and $\vec{v}$ and scalars $c$ and $d$:
+You can see that a linear combination is the joint step of multiplying the vectors by a scalar number and then adding them together. Let's take an example by finding the linear combination of the two vectors $\vec{a}$ and $\vec{b}$ and scalars $c$ and $d$:
 
 $$
-\vec{u} = \begin{bmatrix}1 \\ 2\end{bmatrix}, \vec{v} = \begin{bmatrix}3 \\ 2\end{bmatrix}, \enspace\enspace
-c\vec{u} + d\vec{v} = \begin{bmatrix}c + 3d \\ 2c + 2d\end{bmatrix}
+\vec{a} = \begin{bmatrix}1 \\ 2\end{bmatrix}, \vec{b} = \begin{bmatrix}3 \\ 2\end{bmatrix}, \enspace\enspace
+c\vec{a} + d\vec{b} = \begin{bmatrix}c + 3d \\ 2c + 2d\end{bmatrix}
 $$
 
-Another example: let's say that we have the following result from the linear combination of $\vec{u}$ and $\vec{v}$ from above:
+Another example: let's say that we have the following result from the linear combination of $\vec{a}$ and $\vec{b}$ from above:
 
 $$\begin{bmatrix}5 \\ 6\end{bmatrix}$$
 
-This vector is the result of the following linear combination of $\vec{u}$ and $\vec{v}$ where the scalars are $c = 2$, $d = 1$:
+What are the scalars $c$ and $d$ to produce this result from a linear combination? This vector is the result of the following linear combination of $\vec{a}$ and $\vec{b}$ where the scalars are $c = 2$, $d = 1$:
 
 $$
-\vec{u} = \begin{bmatrix}1 \\ 2\end{bmatrix}, \vec{v} = \begin{bmatrix}3 \\ 2\end{bmatrix}, \enspace\enspace
-2\vec{u} + 1\vec{v} = \begin{bmatrix}(2*1) + (1*3) \\ (2*2) + (1*2)\end{bmatrix} = \begin{bmatrix}5 \\ 6\end{bmatrix}
+\vec{a} = \begin{bmatrix}1 \\ 2\end{bmatrix}, \vec{b} = \begin{bmatrix}3 \\ 2\end{bmatrix}\enspace\enspace
+2\vec{a} + 1\vec{b} = \begin{bmatrix}(2*1) + (1*3) \\ (2*2) + (1*2)\end{bmatrix} = \begin{bmatrix}5 \\ 6\end{bmatrix}
 $$
 
 Naturally, the concept of a linear combination scales to any number of vectors and scalars:
@@ -322,27 +321,11 @@ The result contains a negative component. This can be visualized as:
 
 
 ## Lengths of vectors
-Above, I mentioned that vectors have a length (called _magnitude_), but we don't know how to find it yet. It's often useful to find "how long" a vector is and we do this by using the components of the vector. Fortunately, finding the length of a vector is as easy as using the Pythagorean theorem. For example, for a vector with 2 components, we can form a right triangle with the $x$ and $y$ components and calculate the length as the hypotenuse. For instance, we can find the length of the following vector:
+Above, I mentioned that vectors have a length (called _magnitude_), but we don't know how to find it yet. It's often useful to find "how long" a vector is and we do this by using the components of the vector. Fortunately, finding the length of a vector is as easy as using the Pythagorean theorem. For example, with a vector that has 2 components, we can form a right triangle with the $x$ and $y$ components and calculate the length as the hypotenuse. For instance, we can find the length of the following vector:
 
 $$\vec{v} = \begin{bmatrix}1 \\ 3\end{bmatrix}$$
 
 
-
-```python
-axhline(y=0, color='k', linewidth=0.5)
-axvline(x=0, color='k', linewidth=0.5)
-grid(linestyle='dotted')
-axis([-1, 4, -1, 4])
-annotate('Vector [1, 3] representing x = 1, y = 3', xy=(0.5, 3.1), ha='left')
-quiver([0], [0], 1, 3, angles='xy', scale_units='xy', scale=1)
-plot([0, 1, 1, 1], [0, 0, 0, 3], 'b--')
-annotate('x = 1', xy=(0.5, -0.25), ha='center', color='blue')
-annotate('y = 2', xy=(1.1, 1.0), ha='left', color='blue')
-annotate('a', xy=(0.5, 0.2), ha='center', color='red')
-annotate('b', xy=(0.9, 1.5), ha='right', color='red')
-annotate('c', xy=(0.3, 1.5), ha='right', color='red')
-show()
-```
 
 
 
@@ -355,6 +338,14 @@ $$
 a^2 + b^2 = c^2 \\[3pt]
 1^2 + 2^2 = c^2 \\[3pt]
 5 = c^2 \\[3pt]
+c = \sqrt{5}
+$$
+
+Since we are taking the square root of the left side to find $c$, we can simply define the above as:
+
+$$
+c = \sqrt{a^2 + b^2} \\[3pt]
+c = \sqrt{1^2 + 2^2} \\[3pt]
 c = \sqrt{5}
 $$
 
@@ -393,7 +384,7 @@ Often, when discussing vectors, you'll hear mention of the word _dimension_. **D
 
 $$\begin{bmatrix}3 \\ 1\end{bmatrix}$$
 
-Is 2-dimensional. You'll often see it written as saying $\begin{bmatrix}3 \\ 1\end{bmatrix}$ is a member of $\mathbb{R}^2$. Here are a few other examples:
+Is 2-dimensional. You'll often see it written as saying $\begin{bmatrix}3 \\ 1\end{bmatrix}$ is a member of $\mathbb{R}^2$ since it contains 2 real numbers. Here are a few other examples:
 
 $$
 \begin{bmatrix}3 \\ 1 \\ 2\end{bmatrix} \enspace\rightarrow\enspace \mathbb{R}^3 \qquad
@@ -421,6 +412,8 @@ def v_to_str(v):
     return '[%s]' % (', '.join(map(str, v)))
 ```
 
+
+First let's define $\vec{a}$ and $\vec{b}$:
 
 
 
@@ -532,7 +525,7 @@ Let's see how we can find the length/magnitude of a vector:
 ```python
 from math import sqrt
 
-# Find the length of a vector using Euclidian distance
+# Find the length of a vector using the Pythagorean theorem
 def magnitude(vector):
     squares = [ comp**2 for comp in vector ]
     return sqrt(sum(squares))
@@ -651,7 +644,7 @@ $$\vec{v} = \begin{bmatrix}v_1 \\ v_2 \\ \ldots \\ v_n\end{bmatrix}$$
 Vectors are represented as a symbol with an arrow over it: $\vec{v}$.
 
 ### Magnitude and direction
-Vectors have a magnitude and direction which uniquely define a vector. The magnitude corresponds to _how long_ a vector is, and the direction corresponds to _which direction_ the vector is pointing in. The magnitude is referenced as $\left\Vert\vec{v}\right\Vert$ and is calculated using the Euclidean distance:
+Vectors have a magnitude and direction which uniquely define a vector. The magnitude corresponds to _how long_ a vector is, and the direction corresponds to _which direction_ the vector is pointing in. The magnitude is referenced as $\left\Vert\vec{v}\right\Vert$ and is calculated using the Pythagorean theorem:
 
 $$\left\Vert\vec{v}\right\Vert = \sqrt{(v_1)^2 + (v_2)^2 + \dots + (v_i)^2}$$
 
@@ -698,4 +691,4 @@ $$
 
 ## What's next?
 
-In the next guide, we'll be introduced to [linear systems](LinearSystems.ipynb) and we'll have our first chance to help Harry solve a problem.
+In the next guide, we'll be introduced to [matrices](matrices) which are the next logical progression after vectors. What you'll see is that matrices are very similar to vectors.
