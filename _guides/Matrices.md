@@ -29,7 +29,7 @@ Matrices are an integral part of linear algebra and many other areas and discipl
   - Calculate the properties of an electrical circuit
 
 ## All sizes and shapes
-Matrices can come in all sizes and shapes. When describing a matrix, the size (or sometimes called shape) is important. Conventionally, the size is defined as $M x N$ where $M = \#\,rows$ and $N = \#\,columns$. Taking the following matrix:
+Matrices can come in all sizes and shapes. When describing a matrix, the size (or sometimes called shape) is important. Conventionally, the size is defined as $M x N$ where $M = \#\, rows$ and $N = \#\, columns$. Taking the following matrix:
 
 $$A = \begin{bmatrix}1 & 2 \\ 3 & 4\end{bmatrix}$$
 
