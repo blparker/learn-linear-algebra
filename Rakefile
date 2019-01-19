@@ -84,17 +84,23 @@ def add_front_matter()
 end
 
 def make_front_matter(file)
-    fname = File.basename(file, File.extname(file))
+  fname = File.basename(file, File.extname(file))
 
-    title = fname
-    if title.include? '_'
-      title = title.gsub '_', ' '
-    end
+  # Check to see if the first character is a number (to indicate order)
+  #first_char = fname[0]
+  #if first_char.to_i.to_s == first_char
+    # First character is a number, so replace it
+  #end
 
-    permalink_title = fname.downcase.gsub '_', '-'
-    permalink = "/guides/#{permalink_title}"
+  title = fname
+  if title.include? '_'
+    title = title.gsub '_', ' '
+  end
 
-    front_matter = <<-FM
+  permalink_title = fname.downcase.gsub '_', '-'
+  permalink = "/guides/#{permalink_title}"
+
+  front_matter = <<-FM
 ---
 layout: post
 title: #{title}
