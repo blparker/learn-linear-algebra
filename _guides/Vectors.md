@@ -547,7 +547,7 @@ print('Magnitude of %s = %d' % (v_to_str(other), other_length))
     Magnitude of [3, 4] = 5
 
 
-Putting together all the pieces:
+## Putting together all the code
 
 
 
