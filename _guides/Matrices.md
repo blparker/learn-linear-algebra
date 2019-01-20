@@ -9,7 +9,7 @@ In the [vectors](vectors) guide, we were introduced to the concept of vectors—
 
 $$\begin{bmatrix}1 & 2 \\ 3 & 4\end{bmatrix}$$
 
-Pretty simple. Looks a lot like a vector. Viewing matrices as tables, we say a matrix has columns and rows. A _column_ in a matrix is a vertical list of numbers (e.g., $\begin{bmatrix}1 \\ 3\end{bmatrix}$ is the first column in the matrix above). A _row_ in a matrix is a horizontal list of numbers (e.g., $\begin{bmatrix}3 & 4\end{bmatrix}$ is the second row in the matrix above). 
+Pretty simple. Looks a lot like a vector. Viewing matrices as tables, we say a matrix has columns and rows. A _column_ in a matrix is a vertical list of numbers (e.g., $\begin{bmatrix}1 \\\ 3\end{bmatrix}$ is the first column in the matrix above). A _row_ in a matrix is a horizontal list of numbers (e.g., $\begin{bmatrix}3 & 4\end{bmatrix}$ is the second row in the matrix above). 
 
 Recall that we represented vectors as symbols with an arrow over it (e.g., $\vec{a}$). Matrices are usually represented with capital letters:
 
@@ -29,7 +29,7 @@ Matrices are an integral part of linear algebra and many other areas and discipl
   - Calculate the properties of an electrical circuit
 
 ## All sizes and shapes
-Matrices can come in all sizes and shapes. When describing a matrix, the size (or sometimes called shape) is important. Conventionally, the size is defined as $M x N$ where $M = \#\, rows$ and $N = \#\, columns$. Taking the following matrix:
+Matrices can come in all sizes and shapes. When describing a matrix, the size (or sometimes called shape) is important. Conventionally, the size is defined as $M x N$ where $M=\\#\ rows$ and $N=\\#\ columns$. Taking the following matrix:
 
 $$A = \begin{bmatrix}1 & 2 \\ 3 & 4\end{bmatrix}$$
 
@@ -264,7 +264,7 @@ Using the column-based approach, each column in $B$ tell us how to combine the c
 
 $$\begin{bmatrix}1 & 0\\ 2 & 3\end{bmatrix}\begin{bmatrix}2 & \\ 1 & \end{bmatrix}$$
 
-Each component $c_i$ in $\begin{bmatrix}2\\ 1\end{bmatrix}$ multiplies column $i$ in $A$. We then add up all of the "multiplied" columns to get the first column of the result. In other words, the first column in $C$ is a linear combination of the columns of $A$ and the components in $\begin{bmatrix}2\\ 1\end{bmatrix}$. In the above example, this is saying that we take $2$ of the first column and add it to $1$ of the second column to get the first column of $C$:
+Each component $c_i$ in $\begin{bmatrix}2 \\\ 1\end{bmatrix}$ multiplies column $i$ in $A$. We then add up all of the "multiplied" columns to get the first column of the result. In other words, the first column in $C$ is a linear combination of the columns of $A$ and the components in $\begin{bmatrix}2 \\\ 1\end{bmatrix}$. In the above example, this is saying that we take $2$ of the first column and add it to $1$ of the second column to get the first column of $C$:
 
 $$
 2 * \begin{bmatrix}1 \\ 2\end{bmatrix} + 1 * \begin{bmatrix}0 \\ 3\end{bmatrix} = 
@@ -416,7 +416,7 @@ Since we already know how to visualize vectors, visualizing a matrix is simply v
 
 $$\begin{bmatrix}1 & 3 \\ 3 & 2\end{bmatrix}$$
 
-If we treat the columns as vectors, we're visualizing the 2 vectors: $\begin{bmatrix}1 \\ 3\end{bmatrix}$ and $\begin{bmatrix}3 \\ 2\end{bmatrix}$
+If we treat the columns as vectors, we're visualizing the 2 vectors: $\begin{bmatrix}1 \\\ 3\end{bmatrix}$ and $\begin{bmatrix}3 \\\ 2\end{bmatrix}$
 
 
 
@@ -607,7 +607,7 @@ a_{2,1} & a_{2,2} & \dots & a_{2,n} \\
 a_{m,1} & a_{m,2} & \dots & a_{m,n}
 \end{bmatrix}$$
 
-Matrices have a size that is defined as $M x N$ where $M = \#\ rows$ and $N = \#\ columns$.
+Matrices have a size that is defined as $M x N$ where $M=\\#\ rows$ and $N=\\#\ columns$.
 
 Matrix addition, subtraction, and scalar multiplication behave in the same way as vector operations in that they are performed component wise. When performing matrix addition and subtraction, the matrices are required to be the same size:
 
