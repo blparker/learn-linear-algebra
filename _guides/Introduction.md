@@ -60,3 +60,7 @@ I've based my own learning around a few pretty good resources, and you'll likely
 
 ## Feedback
 I'm open to feedback, so please don't hesitate to reach out if there is something you think can be improved, expanded on, or is flat out wrong. Questions or errata can be sent to <bryan@bryan.blog>.
+
+## Get Updates!
+
+I'm currently in the process of writing and reviewing the other guides, so make sure you sign up below in order to be notified when I publish them. 
