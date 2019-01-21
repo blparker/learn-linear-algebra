@@ -15,8 +15,8 @@ Throughout the years, there have been a tremendous number of advancements in hel
 
 As alluded to above, given the surge of interest in machine learning and AI over the past 10 years, it makes sense that linear algebra interest has grown as well, because linear algebra constitutes a large portion of the mathematical underpinnings of machine learning and AI. As demonstrated by the following pie chart, linear algebra constitutes approximately 35% of the underlying math used in machine learning:
 
-<span style="display: none">(outputs/Introduction_attach_0_image.png)</span>
-<img src="outputs/Introduction_attach_0_image.png" width="400" alt="">
+<span style="display: none">(outputs/Introduction_attach_1_image.png)</span>
+<img src="outputs/Introduction_attach_1_image.png" width="400" alt="">
 <figcaption style="display: block; text-align:center;">(<a href="https://towardsdatascience.com/the-mathematics-of-machine-learning-894f046c568">image source</a>)</figcaption>
 
 Whether or not this proportion is correct, one thing is certain: linear algebra is a fundamental part of machine learning. At the core of [linear algebra](https://en.wikipedia.org/wiki/Linear_algebra) are the concepts of linear equations, vectors, matrices, and linear transformations. It's okay if you don't know what any of these mean. We'll get to all this in due time.
@@ -24,8 +24,8 @@ Whether or not this proportion is correct, one thing is certain: linear algebra 
 ## Motivating example
 I tend to learn best by seeing examples after being introduced to a new concept in an attempt to draw intuition to the concept. As a result, these guides will contain lots of examples to help make connections between the concepts and intuition. Additionally, each concept will have a Python implementation to give you an idea of how they are used in practice. With that said, for the sake of continuity (and lack of imagination), most of the examples will center around contrived problems within a hypothetical business. Meet Harry's Hotdogs and Hamburgers:
 
-<span style="display: none">(outputs/Introduction_attach_1_image.png)</span>
-<img src="outputs/Introduction_attach_1_image.png" width="400" alt="">
+<span style="display: none">(outputs/Introduction_attach_2_image.png)</span>
+<img src="outputs/Introduction_attach_2_image.png" width="400" alt="">
 <figcaption style="display: block; text-align:center;">(<a href="https://www.flickr.com/photos/sydneyhistory/6914445773/">image source</a>)</figcaption>
 
 > Harry's Hotdogs and Hamburgers specializes in, well, hotdogs and hamburgers. Harry tends to set up shop at various events selling his world-famous hotdogs and hamburgers. Business has been good to Harry and as a result has allowed him to think about the future. Harry is thinking about expanding to new events and open new stands, but he wants to make sound financial decisions. Before making any decisions, Harry wants to make predictions about his future profit to ensure that the decision to expand is wise. He enlists our help to assist him in predicting his finances. He has agreed to give us a list of his sales and finances, and our goal will be to build a model for Harry to help predict how much he can expect to earn given his current sales.

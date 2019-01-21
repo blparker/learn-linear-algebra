@@ -85,7 +85,7 @@ Now that we have some points, let's plot those and draw a line through them. Not
 
 
 
-![png](outputs/Linear_Systems_attach_2_image.png)
+![png](outputs/Linear_Systems_attach_3_image.png)
 
 
 It can be tough to reason about the intuition of the chart, but I'll give it a try. Since we are plotting the equation $d + h = 50$, this chart represents the combination of the total number of hotdogs and hamburgers, with the X and Y-axes being the number of hotdogs and hamburgers respectively. Recall the Y-intercept is when $d = x = 0$, so in our case, the Y-intercept is $50$. This is equivalent to saying that of the $50$ total hotdogs and hamburgers, 0 hotdogs and 50 hamburgers were sold. As you increase the number of hotdogs (i.e., move right along the X-axis), you can see the number of hamburgers comes down. It's a delicate balance because our constraint $d + h = 50$, so if $d$ increases, $h$ **must** decrease in order for the equation to hold true. You can increase this until you reach the X-intercept (where $h = y = 0$) and surprise, surprise, $d = 50, h = 0$, which can be interpreted as: of the $50$ total hotdogs and hamburgers, 50 hotdogs and 0 hamburgers were sold.
@@ -110,7 +110,7 @@ Since our system above is just 2 linear equations, we can plot the independent l
 
 
 
-![png](outputs/Linear_Systems_attach_5_image.png)
+![png](outputs/Linear_Systems_attach_6_image.png)
 
 
 Eureka! They cross at the point $x = d = 30$, $y = h = 20$. What this tells us is that of the 50 total hotdogs and hamburgers, Harry sold 30 hotdogs and 20 hamburgers. Although it may be obvious, we can plug these numbers back into our original equations to double check:

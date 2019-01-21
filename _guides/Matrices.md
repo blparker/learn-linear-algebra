@@ -5,6 +5,9 @@ permalink: /guides/matrices
 ---
 
 # Matrices
+
+## Introduction
+
 In the [vectors](vectors) guide, we were introduced to the concept of vectors—one of the primitives of linear algebra. Another equally important primitive is that of matrices. Matrices are used everywhere in linear algebra and other areas of mathematics. Just like the word _vector_ sounds complex (but is nothing more than a list of numbers), a **matrix** is simply a _table_ of numbers that represents something. In fact, matrices and vectors really aren't all that different. This is an example of what a matrix looks like:
 
 $$\begin{bmatrix}1 & 2 \\ 3 & 4\end{bmatrix}$$
@@ -310,8 +313,8 @@ And, what do you know—$C$ is the same as our result from the element-wise mult
 
 Recall that when doing matrix addition and subtraction, the matrices **must** be the same size (i.e., both must be $MxN$). So far, the examples of matrix multiplication we've seen have all been with matrices of the same size. However, with multiplication, we're able to multiply different sized matrices. The only requirement is that the number of columns in $A$ must match the number of rows in $B$. That is, a matrix with size $M x N$ can be multiplied to another matrix of size $N x P$. The size of the resulting matrix will be $M x P$. Intuitively, since the columns in $B$ dictate the combination of the columns of $A$, it makes sense that the number of rows in the result matrix will equal the number of rows in $A$ and the number of columns of the result matrix will equal the number of columns in $B$. There's a useful mental image that you can use when determining if the multiplication is legal and what the result matrix's size will be:
 
-<span style="display: none">(outputs/Matrices_attach_8_image.png)</span>
-<img src="outputs/Matrices_attach_8_image.png" width="400" alt="">
+<span style="display: none">(outputs/Matrices_attach_9_image.png)</span>
+<img src="outputs/Matrices_attach_9_image.png" width="400" alt="">
 <figcaption style="display: block; text-align:center;">(<a href="http://www.coolmath.com/algebra/24-matrices/04-multiplying-matrices-01">image source</a>)</figcaption>
 
 Multiplication of 2 different sized matrices still follows the same rules:
@@ -422,7 +425,7 @@ If we treat the columns as vectors, we're visualizing the 2 vectors: $\begin{bma
 
 
 
-![png](outputs/Matrices_attach_13_image.png)
+![png](outputs/Matrices_attach_14_image.png)
 
 
 ### Visualizing matrix multiplication
@@ -437,7 +440,7 @@ And, let's say that we want to "flatten" the vectors onto the X-axis. That is, w
 
 
 
-![png](outputs/Matrices_attach_15_image.png)
+![png](outputs/Matrices_attach_16_image.png)
 
 
 The question is, what can we multiply the original matrix by to "transform" it into a new matrix that has these two vectors? We have the original matrix:
@@ -470,7 +473,7 @@ It kept the X-axis portion of the original matrix, but "chopped" off the Y-axis 
 
 
 
-![png](outputs/Matrices_attach_17_image.png)
+![png](outputs/Matrices_attach_18_image.png)
 
 
 ## Order matters

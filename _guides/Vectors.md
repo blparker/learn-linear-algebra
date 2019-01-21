@@ -6,6 +6,8 @@ permalink: /guides/vectors
 
 # Vectors
 
+## Introduction
+
 Hi there! Welcome to the guide on vectors!
 
 Vectors are a very important concept in linear algebra and serve as a fundamental primitive. They are used in various ways all throughout linear algebra, calculus, physics, and many other domains. As a result, introducing vectors serves as a logical starting point in our exploration of linear algebra.
@@ -22,6 +24,9 @@ $$\begin{bmatrix}5 \\ 2\end{bmatrix}$$
 
 Vectors (and matrices as we'll see later) are represented as a list of numbers surrounded by square brackets. Each number in the vector is commonly called a **component** or **element**.
 
+
+## Visualizing a vector
+
 A common way to understand a concept like vectors is to visualize it somehow. We can easily visualize vectors by viewing them geometrically and plotting them in a coordinate system. For example, let's take the following vector:
 
 $$\begin{bmatrix}1 \\ 2\end{bmatrix}$$
@@ -32,7 +37,7 @@ And try to visualize it. We can think about a vector geometrically by allowing t
 
 
 
-![png](outputs/Vectors_attach_2_image.png)
+![png](outputs/Vectors_attach_3_image.png)
 
 
 Vectors are drawn as arrows with a starting point and an ending point. The black arrow above is the vector $\begin{bmatrix}1 \\\ 2\end{bmatrix}$ with a starting point of the origin $(0, 0)$. Since $x = 1, y = 2$, we move 1 unit in the positive X-direction and 2 units in the positive Y-direction to arrive at the endpoint. Vectors are generally drawn as an arrow to differentiate them from a line segment.
@@ -43,8 +48,8 @@ $$\begin{bmatrix}1 \\ 2 \\ 3\end{bmatrix}$$
 
 This represents a vector in 3D. Geometrically, we can allow $x = 1, y = 2, z = 3$. In order to visualize this vector, we need a 3D coordinate system:
 
-<span style="display: none">(outputs/Vectors_attach_3_image.png)</span>
-<img src="outputs/Vectors_attach_3_image.png" width="500">
+<span style="display: none">(outputs/Vectors_attach_4_image.png)</span>
+<img src="outputs/Vectors_attach_4_image.png" width="500">
 <figcaption style="display: block; text-align:center;">(<a href="https://www.geogebra.org/3d/nhytbgup">image source</a>)</figcaption>
 
 In order to visualize this vector, we move 1 unit in X-direction (red axis), 2 units in the Y-direction (green axis), and 3 in the Z-direction (blue axis). Note, the light blue box in the plot above is just a visualization aid.
@@ -67,7 +72,7 @@ Clearly, the components are different, but let's visualize them:
 
 
 
-![png](outputs/Vectors_attach_5_image.png)
+![png](outputs/Vectors_attach_6_image.png)
 
 
 You can see that the vectors are clearly pointing in different directions even though they look the same length. Because these vectors point in a different _direction_, they are completely different vectors. Similarly, vectors can point in the same direction, but have a different _magnitude_ (i.e., length). Consider the following 2 vectors:
@@ -78,7 +83,7 @@ $$\begin{bmatrix}2 \\ 2\end{bmatrix}, \begin{bmatrix}4 \\ 4\end{bmatrix}$$
 
 
 
-![png](outputs/Vectors_attach_7_image.png)
+![png](outputs/Vectors_attach_8_image.png)
 
 
 They are pointing in the same direction, but the blue vector is twice as long as the red vector, thus the 2 vectors have different magnitudes. These are 2 different vectors.
@@ -89,7 +94,7 @@ An important thing to call out is that magnitude can be different without affect
 
 
 
-![png](outputs/Vectors_attach_9_image.png)
+![png](outputs/Vectors_attach_10_image.png)
 
 
 These 2 vectors are pointing in different directions _and_ have different lengths.
@@ -151,12 +156,12 @@ Following the steps from above, we arrived at a resulting vector of $\begin{bmat
 
 
 
-![png](outputs/Vectors_attach_16_image.png)
+![png](outputs/Vectors_attach_17_image.png)
 
 
 Adding 2 scalar numbers can be visualized using an number line. To add the numbers $3$ and $4$:
 
-![image.png](outputs/Vectors_attach_17_image.png)
+![image.png](outputs/Vectors_attach_18_image.png)
 (source: http://mathandmultimedia.com/2015/07/25/add-integers-using-the-number-line/)
 
 We simply move $3$ units in the positive direction and then from that spot move $4$ more units in the positive direction. You can also imagine this as if we had 2 ropes of length $3$ and $4$ and we lined them up end to end, then the combined length of the 2 ropes would be $7$.
@@ -177,7 +182,7 @@ We still arrive at the same result no matter which comes first. If we plot $\beg
 
 
 
-![png](outputs/Vectors_attach_18_image.png)
+![png](outputs/Vectors_attach_19_image.png)
 
 
 So far, our examples of addition have been limited to vectors that only have 2 components, but all the operations in this guide apply to vectors of arbitrary size (i.e., any number of components). For example, here is addition with vectors that have 5 components:
@@ -204,7 +209,7 @@ Verbalized, this is equivalent to traveling 3 units to the right, 5 units up (to
 
 
 
-![png](outputs/Vectors_attach_21_image.png)
+![png](outputs/Vectors_attach_22_image.png)
 
 
 ### Scalar multiplication of a vector
@@ -222,7 +227,7 @@ Geometrically, this can be thought of as stretching or shrinking the vector (dep
 
 
 
-![png](outputs/Vectors_attach_23_image.png)
+![png](outputs/Vectors_attach_24_image.png)
 
 
 ### Scalar division of a vector
@@ -317,7 +322,7 @@ The result contains a negative component. This can be visualized as:
 
 
 
-![png](outputs/Vectors_attach_30_image.png)
+![png](outputs/Vectors_attach_31_image.png)
 
 
 ## Lengths of vectors
@@ -329,7 +334,7 @@ $$\vec{v} = \begin{bmatrix}1 \\ 3\end{bmatrix}$$
 
 
 
-![png](outputs/Vectors_attach_32_image.png)
+![png](outputs/Vectors_attach_33_image.png)
 
 
 And, we can use the Pythagorean theorem to find the length of the $\vec{v}$. We can allow the $x$ leg to be $a$, and the $y$ leg to be $b$:
@@ -371,7 +376,7 @@ All of the vectors drawn above are drawn in _standard form_ (starting from the o
 
 
 
-![png](outputs/Vectors_attach_36_image.png)
+![png](outputs/Vectors_attach_37_image.png)
 
 
 These 2 vectors have the same exact direction and the same magnitude. One just happens to be in standard form and the other "starts" from $x = 2, y = 2$, but they are fundamentally represented as the vector:
