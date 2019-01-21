@@ -4,8 +4,6 @@ title: Vectors
 permalink: /guides/vectors
 ---
 
-# Vectors
-
 ## Introduction
 
 Hi there! Welcome to the guide on vectors!

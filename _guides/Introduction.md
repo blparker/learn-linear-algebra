@@ -4,8 +4,6 @@ title: Introduction
 permalink: /guides/introduction
 ---
 
-# Introduction to Linear Algebra Using Python
-
 ## 👋
 
 Hi there! Welcome to the _Introduction to Linear Algebra Using Python_ guide. This guide will with the very basics and walk you through the fundamentals of linear algebra. As we go, we will implement the concepts we learn in Python to get a feel of how these concepts are used in real world. I'm happy you're here, and I hope you find this guide helpful. Let's get to it! 🚀

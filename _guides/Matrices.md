@@ -4,8 +4,6 @@ title: Matrices
 permalink: /guides/matrices
 ---
 
-# Matrices
-
 ## Introduction
 
 In the [vectors](vectors) guide, we were introduced to the concept of vectors—one of the primitives of linear algebra. Another equally important primitive is that of matrices. Matrices are used everywhere in linear algebra and other areas of mathematics. Just like the word _vector_ sounds complex (but is nothing more than a list of numbers), a **matrix** is simply a _table_ of numbers that represents something. In fact, matrices and vectors really aren't all that different. This is an example of what a matrix looks like:

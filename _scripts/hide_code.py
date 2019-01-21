@@ -23,7 +23,7 @@ class HideCodePreprocessor(Preprocessor):
 
         #print(json.dumps(nb.cells))
         # Filter out empty code cells
-        nb.cells = [cell for cell in nb.cells if not self.empty_code_cell(cell)]
+        nb.cells = [cell for cell in nb.cells if not self.empty_code_cell(cell) and not self.is_title_cell(cell)]
 
         return nb, resources
 
@@ -31,4 +31,7 @@ class HideCodePreprocessor(Preprocessor):
         if cell.get('cell_type', '') != 'code':
             return False
         return not cell.source and not len(cell.get('outputs', []))
+
+    def is_title_cell(self, cell):
+        return 'title' in cell.metadata and cell.metadata['title'] == True
 
