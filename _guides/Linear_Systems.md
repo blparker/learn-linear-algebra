@@ -9,13 +9,13 @@ permalink: /guides/linear-systems
 ## Introduction
 Now that we have a handle on [vectors](vectors) and [matrices](matrices), we're going to take our first foray into using what we've learned so far and apply it to a real problem. This problem will help drive some of the examples so that we can draw connections between the problem and the math used to solve the problem. Recall from the [introduction](introduction) guide we introduced _Harry's Hotdogs and Hamburgers_. Harry has enlisted our help to solve a problem of his:
 
-> Harry recently set up shop at a baseball game. Things went well, but at the end of the day, Harry realizes that he didn't keep track of how many individual hotdogs and hamburgers he sold, but he does have totals. He knows that he sold of a combined total of 50 hotdogs and hamburgers and he made $\$85.00$ total. Harry sells the hotdogs for $\$1.50$ and the hamburgers for $\$2.00$. In order to restock, Harry would like to know how many hotdogs and hamburgers he individually sold.
+> Harry recently set up shop at a baseball game. Things went well, but at the end of the day, Harry realizes that he didn't keep track of how many individual hotdogs and hamburgers he sold, but he does have totals. He knows that he sold of a combined total of 50 hotdogs and hamburgers and he made \\$85.00 total. Harry sells the hotdogs for \\$1.50 and the hamburgers for \\$2.00. In order to restock, Harry would like to know how many hotdogs and hamburgers he individually sold.
 
 Okay, now that we understand the problem, let's see if we can write what we know in math terms. We know the total number of hotdogs and hamburgers sold was 50:
 
 $$hotdogs + hamburgers = 50$$
 
-And, selling the hotdogs for $\$1.50$ and the hamburgers for $\$2.00$ the total amount made was $\$85.00$:
+And, selling the hotdogs for \\$1.50 and the hamburgers for \\$2.00 the total amount made was \\$85.00:
 
 $$\$1.50 * hotdogs + \$2.00 * hamburgers = \$85.00$$
 
@@ -99,7 +99,7 @@ d + h = 50 \\
 1.5d + 2h = 85
 $$
 
-Repeating above, $d + h = 50$ tells us that a total of 50 hotdogs and hamburgers were sold. $1.5d + 2h = 85$ tells us that when charging $\$1.50$ for hotdogs and $\$2.00$ for hamburgers, the stand earned a total of $\$85.00$. Harry wants to know how many of each variety were sold. How do we find this out? There are few different ways: geometrically, substitution, and elimination.
+Repeating above, $d + h = 50$ tells us that a total of 50 hotdogs and hamburgers were sold. $1.5d + 2h = 85$ tells us that when charging \\$1.50 for hotdogs and \\$2.00 for hamburgers, the stand earned a total of \\$85.00. Harry wants to know how many of each variety were sold. How do we find this out? There are few different ways: geometrically, substitution, and elimination.
 
 Solving geometrically is the most intuitive, so let's start with that.
 
