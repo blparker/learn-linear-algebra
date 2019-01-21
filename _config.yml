@@ -23,7 +23,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://linearalgebra.xyz" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: bryanlparker
 github_username:  blparker
-github_repo: https://github.com/blparker/learn-linear-algebra
+github_repo: blparker/learn-linear-algebra
+google_analytics: UA-132854861-1
 
 # Build settings
 markdown: kramdown
