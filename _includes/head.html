@@ -5,6 +5,39 @@
   {%- seo -%}
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+      #mc_embed_signup {
+        background: #fff;
+        clear: left;
+        font: 14px;
+        width: 100%;
+        border-radius: 2px;
+        display: inline-block;
+        margin: 1rem;
+        position: relative;
+        /*box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0,0,0,0.14);*/
+        -webkit-box-shadow: 0 10px 6px -6px #999;
+           -moz-box-shadow: 0 10px 6px -6px #999;
+                box-shadow: 0 10px 6px -6px #999;
+        border-top: 1px solid #eee;
+        border-right: 1px solid #ddd;
+        border-left: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+      }
+      #mc_embed_signup form {
+      }
+      #mc_embed_signup::before {
+      }
+      #mc_embed_signup label {
+        font-size: 26px;
+      }
+      #mc_embed_signup .clear > input {
+        vertical-align: top;
+      }
+      /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+  </style>
+
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}

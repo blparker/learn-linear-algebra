@@ -46,7 +46,7 @@ task :publish do
       puts item
       puts "Publishing #{item}"
 
-      system "JEKYLL_ENV=production jupyter nbconvert #{item} --config #{NBCONVERT_CONFIG_FILE} --output-dir ./rendered"
+      system "jupyter nbconvert #{item} --config #{NBCONVERT_CONFIG_FILE} --output-dir ./rendered"
     end
 
     # Once the notebooks have been converted, we need to add the appropriate front matter and copy them into the _guides directory

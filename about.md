@@ -20,3 +20,5 @@ for the guides can be found at <{{ site.github_repo }}>.
 I've tried to do my best to provide sufficient details and examples. If you find issues in the content or anything isn't clear, or just have suggestions in general,
 feel free to let me let me know. You can reach me by email at <{{ site.email }}>. Thanks!
 
+{%- include newsletter.html -%}
+
