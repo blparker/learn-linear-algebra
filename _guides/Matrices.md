@@ -642,3 +642,8 @@ When performing matrix multiplication, the commutative property does not hold: $
 ## What's next?
 
 Getting a grasp on vectors and matrices are a necessary prerequisite for the entirety of linear algebra. They are used extensively throughout, so it's necessary to have a good working basis on what they are and how to work with them. Equipped with this knowledge, we are now ready to tackle the meat of linear algebra. In the next section, we'll begin our exploration of linear systems and finally see how we can use linear algebra to help Harry solve an accounting problem. Let's go help Harry. On to [linear systems](linear-systems)!
+
+<nav class="links">
+    <a href="vectors" class="prev">Vectors</a>
+    <a href="linear-systems" class="next">Linear Systems</a>
+</nav>

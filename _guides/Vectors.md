@@ -695,3 +695,8 @@ $$
 ## What's next?
 
 In the next guide, we'll be introduced to [matrices](matrices) which are the next logical progression after vectors. What you'll see is that matrices are very similar to vectors.
+
+<nav class="links">
+    <a href="introduction" class="prev">Introduction</a>
+    <a href="matrices" class="next">Matrices</a>
+</nav>

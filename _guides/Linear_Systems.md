@@ -283,3 +283,8 @@ We saw a concrete example of how solving a system of linear equations is useful 
 ## What's next?
 
 This guide introduced the idea behind systems of linear equations and showed various ways to arrive at a solution. However, no code was given for how we might systematically solve a system. As systems grow in the number of variables and equations, it becomes increasingly important to solve the systems in a systematic way. In the [next section](solving-systems-of-linear-equations), we'll determine how we can use matrices to represent and solve Harry's system of linear equations, and see how we can write some code to automatically solve systems of linear equations.
+
+<nav class="links">
+    <a href="matrices" class="prev">Matrices</a>
+    <a href="solving-systems-of-linear-equations" class="next">Solving Systems of Linear Equations</a>
+</nav>

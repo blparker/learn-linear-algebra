@@ -64,3 +64,7 @@ I'm open to feedback, so please don't hesitate to reach out if there is somethin
 ## Get Updates!
 
 I'm currently in the process of writing and reviewing the other guides, so make sure you sign up below in order to be notified when I publish them. 
+
+<nav class="links">
+    <a href="vectors" class="next">Vectors</a>
+</nav>
