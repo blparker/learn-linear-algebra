@@ -44,6 +44,31 @@ figure {
       display: block;
       margin: 0 auto;
     }
+
+    nav.links {
+      overflow: auto;
+
+      a {
+      }
+
+      .prev {
+        float: left;
+      }
+
+      .prev::before {
+        content: '«';
+        margin-right: 5px;
+      }
+
+      .next {
+        float: right;
+      }
+
+      .next::after {
+        content: '»';
+        margin-left: 5px;
+      }
+    }
   }
 }
 
