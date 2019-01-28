@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+show: true
 ---
 
 Hi there. 👋
