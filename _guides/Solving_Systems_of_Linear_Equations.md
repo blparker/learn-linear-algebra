@@ -3,7 +3,6 @@ layout: post
 title: Solving Systems of Linear Equations
 permalink: /guides/solving-systems-of-linear-equations
 ---
-
 # Solving $A\vec{x} = \vec{b}$
 
 ## Introduction

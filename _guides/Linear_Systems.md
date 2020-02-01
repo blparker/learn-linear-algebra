@@ -3,7 +3,6 @@ layout: post
 title: Linear Systems
 permalink: /guides/linear-systems
 ---
-
 ## Introduction
 Now that we have a handle on [vectors](vectors) and [matrices](matrices), we're going to take our first foray into using what we've learned so far and apply it to a real problem. This problem will help drive some of the examples so that we can draw connections between the problem and the math used to solve the problem. Recall from the [introduction](introduction) guide we introduced _Harry's Hotdogs and Hamburgers_. Harry has enlisted our help to solve a problem of his:
 
