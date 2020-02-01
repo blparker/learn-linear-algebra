@@ -2,7 +2,6 @@
 require "rubygems"
 require "tmpdir"
 
-# Change your GitHub reponame
 GITHUB_REPONAME = "blparker/learn-linear-algebra"
 GITHUB_REPO_BRANCH = "gh-pages"
 
@@ -29,36 +28,37 @@ task :publish do
   # Make a temp dir to hold the files
   #Dir.mktmpdir do |tmp|
   tmp = './tmp'
+  rendered = './rendered'
   Dir.mkdir(tmp, 0700)
-    # Copy all the notebooks to the tmp
-    cp_r File.join(NOTEBOOKS, '.'), tmp
-    cp_r File.join(pwd, '_scripts', '.'), tmp
 
-    Dir.chdir tmp
+  # Copy all the notebooks to the tmp
+  cp_r File.join(NOTEBOOKS, '.'), tmp
+  cp_r File.join(pwd, '_scripts', '.'), tmp
 
-    # Create the jupyter nbconvert config file in the tmp directory
-    File.write(NBCONVERT_CONFIG_FILE, NBCONVERT_CONFIG)
+  Dir.chdir tmp
+  Dir.mkdir(rendered, 0700)
 
-    # For each notebook, generate it
-    Dir.foreach('.') do |item|
-      next if not is_notebook(item)
+  # Create the jupyter nbconvert config file in the tmp directory
+  File.write(NBCONVERT_CONFIG_FILE, NBCONVERT_CONFIG)
 
-      puts item
-      puts "Publishing #{item}"
+  # For each notebook, generate it
+  Dir.foreach('.') do |item|
+    next if not is_notebook(item)
 
-      system "jupyter nbconvert #{item} --config #{NBCONVERT_CONFIG_FILE} --output-dir ./rendered"
-    end
+    puts "Publishing #{item}"
 
-    # Once the notebooks have been converted, we need to add the appropriate front matter and copy them into the _guides directory
-    # Prepend the front matter to beginning of the new markdown file
+    system "jupyter nbconvert #{item} --config #{NBCONVERT_CONFIG_FILE} --output-dir ./rendered"
+  end
 
-    Dir.chdir './rendered'
+  # Once the notebooks have been converted, we need to add the appropriate front matter and copy them into the _guides directory
+  # Prepend the front matter to beginning of the new markdown file
 
-    add_front_matter()
-    copy_to_dir(pwd)
+  Dir.chdir './rendered'
 
-    Dir.chdir pwd
-  #end
+  add_front_matter()
+  copy_to_dir(pwd)
+
+  Dir.chdir pwd
 end
 
 def is_notebook(path)
