@@ -186,9 +186,9 @@ You can imagine the resulting vector (the magenta vector above) like a route—t
 
 Like simple addition, vector addition is commutative. For example:
 
-$$\begin{bmatrix}1 \\ 2\end{bmatrix} + \begin{bmatrix}2 \\ 1\end{bmatrix} = \begin{bmatrix}2 \\ 1\end{bmatrix} + \begin{bmatrix}1 \\ 2\end{bmatrix} = \begin{bmatrix}3 \\ 3\end{bmatrix}$$
+$$\begin{bmatrix}1 \\ 2\end{bmatrix} + \begin{bmatrix}3 \\ 1\end{bmatrix} = \begin{bmatrix}3 \\ 1\end{bmatrix} + \begin{bmatrix}1 \\ 2\end{bmatrix} = \begin{bmatrix}4 \\ 3\end{bmatrix}$$
 
-We still arrive at the same result no matter which comes first. If we plot $\begin{bmatrix}2 \\\ 1\end{bmatrix}$ first and then add $\begin{bmatrix}1 \\\ 2\end{bmatrix}$, as expected, the addition still takes us to the same resulting vector:
+We still arrive at the same result no matter which comes first. If we plot $\begin{bmatrix}3 \\\ 1\end{bmatrix}$ first and then add $\begin{bmatrix}1 \\\ 2\end{bmatrix}$, as expected, the addition still takes us to the same resulting vector:
 
 
 

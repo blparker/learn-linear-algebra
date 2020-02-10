@@ -1,3 +1,16 @@
+# 
+# Steps to publish
+#   0. In draft repo, publish notebooks
+#         cd scripts
+#         ./publish.sh <NOTEBOOK_NAME>
+#   1. Get updated notebooks:
+#         cd _notebooks
+#         git pull
+#   2. Publish notebooks
+#         source env/bin/activate
+#         rake publish
+#   3. Commit Git changes
+#
 # encoding: UTF-8
 require "rubygems"
 require "tmpdir"
