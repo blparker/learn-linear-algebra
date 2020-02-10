@@ -7,11 +7,11 @@ permalink: /guides/introduction
 
 Hi there! Welcome to the _Introduction to Linear Algebra Using Python_ guide. This guide will introduce the very basics and walk you through the fundamentals of linear algebra. As we go, we'll implement the concepts we learn in Python to get a feel for how these concepts are used in real world. I'm happy you're here, and I hope you find this guide helpful. Let's get to it! 🚀
 
-## Why bother?
+## Why bother with linear algebra?
 
 Throughout history, we've sought to understand the world around us, and as a result, have developed useful tools to aid in this understanding—one of the most useful of which is mathematical models. Often, as it turns out, the most useful and powerful models are developed using concepts found in linear algebra. Models developed using linear algebra tend to describe the real world in a simple and understandable way.
 
-Although linear algebra is a domain of math, it's not limited to only solving math problems. In fact, linear algebra is one of the most widely used areas of math. Applications can be found throughout the sciences, engineering, finance, and any other domain that deals with numbers. More recently, given the explosive growth of machine learning and artificial intelligence, you are finding applications of linear algebra in seemingly less obvious domains (for example: [Magenta](https://magenta.tensorflow.org/), [AI generated artwork](https://www.nytimes.com/2018/10/22/arts/design/christies-art-artificial-intelligence-obvious.html), [archaeology](https://www.techrepublic.com/article/how-deep-learning-helps-archaeologists-rediscover-the-past/), to name a few).
+Although linear algebra is a domain of mathematics, it's not limited to only solving math problems. In fact, linear algebra is one of the most widely used areas of math. Applications can be found throughout the sciences, engineering, finance, and any other domain that deals with numbers. More recently, given the explosive growth of machine learning and artificial intelligence, you are finding applications of linear algebra in seemingly less obvious domains (for example: [Magenta](https://magenta.tensorflow.org/), [AI generated artwork](https://www.nytimes.com/2018/10/22/arts/design/christies-art-artificial-intelligence-obvious.html), [archaeology](https://www.techrepublic.com/article/how-deep-learning-helps-archaeologists-rediscover-the-past/), to name a few).
 
 The reason I initially became interested in linear algebra was because of its importance in machine learning and AI. According to this random image from the Internet, linear algebra constitutes up to 35% of the mathematical underpinnings of machine learning.
 
@@ -25,25 +25,15 @@ The actual percentage can be debated, but that is beside the point. The fact is 
 
 This guide is for anyone looking for a soft and intuition-based introduction to linear algebra. For the math portion, I've tried to maintain a balance between theory and practice, therefore, basic high-school math is really all you need. For the Python portion, basic working knowledge of Python should do. This won't serve as an introduction to Python as there are far better resources out there than I could provide. The Python code in this guide is written using Python 3, but _most_ examples should work with Python 2 as well, but your mileage may vary. Additionally, the code is written with a primary focus on understandability versus other factors (e.g., performance), so fair warning if you want to use it externally.
 
-Throughout the years, there have been a tremendous number of advancements in helping us better understand the world. A key tool used in developing this understanding is that of a mathematical model. The usefulness of mathematics is not solely bound to math, but spills over into many other science, engineering, and social applications. Even more recently, with the interest in machine learning and artificial intelligence (AI), we are seeing applications of mathematical models in seemingly non-obvious domains (for example: [Magenta](https://magenta.tensorflow.org/), [AI generated artwork](https://www.nytimes.com/2018/10/22/arts/design/christies-art-artificial-intelligence-obvious.html), [archaeology](https://www.techrepublic.com/article/how-deep-learning-helps-archaeologists-rediscover-the-past/), to name a few). Oftentimes, the most useful and powerful models are developed using the concepts found in linear algebra, because models developed using linear algebra tend to describe the real world in a simple and understandable way.
-
-As mentioned above, over the past 10 years, we've seen a surge of interest in machine learning and AI. As demonstrated by the following pie chart, topics in linear algebra constitute a large portion of the mathematical underpinnings of machine learning:
-
-<span style="display: none">(attachment:image.png)</span>
-<img src="attachment:image.png" width="400" alt="">
-<figcaption style="display: block; text-align:center;">(<a href="https://towardsdatascience.com/the-mathematics-of-machine-learning-894f046c568">image source</a>)</figcaption>
-
-As a result of the surge of interest in ML and AI, it's no surprise that interest in linear algebra has grown as well. Whether or not this proportion above is correct, one thing is certain: linear algebra is a fundamental part of machine learning. At the core of [linear algebra](https://en.wikipedia.org/wiki/Linear_algebra) are the concepts of linear equations, vectors, matrices, and linear transformations. It's okay if you don't know what any of these mean. We'll get to all this in due time.
-
 ## Motivating example
 
 I tend to learn best by seeing examples and developing intuitions—especially after being introduced to a new concept. Therefore, these guides will contain many examples to help make connections between the concepts. Additionally, most concepts will have a Python implementation to give you an idea of how they are used in practice. With that said, for the sake of continuity (and lack of imagination), most of the examples will center around contrived problems within a hypothetical business. Meet Harry's Hotdogs and Hamburgers:
 
-<span style="display: none">(outputs/Introduction_attach_4_image.png)</span>
-<img src="outputs/Introduction_attach_4_image.png" width="400" alt="">
+<span style="display: none">(outputs/Introduction_attach_3_image.png)</span>
+<img src="outputs/Introduction_attach_3_image.png" width="400" alt="">
 <figcaption style="display: block; text-align:center;">(<a href="https://www.flickr.com/photos/sydneyhistory/6914445773/">image source</a>)</figcaption>
 
-> Harry's Hotdogs and Hamburgers specializes in, well, hotdogs and hamburgers. Harry tends to set up shop at various events selling his world-famous hotdogs and hamburgers. Business has been good to Harry and has allowed him to think about the future. Harry is thinking about expanding to new events and open new stands, but he wants to make sound financial decisions. Before making any decisions, Harry wants to make predictions about his future profit to ensure that the decision to expand is wise. He enlists our help to assist him in predicting his finances. He has agreed to give us a list of his sales and finances, and our goal will be to build a model for Harry to help predict how much he can expect to earn given his current sales.
+> Harry's Hotdogs and Hamburgers specializes in, well, hotdogs and hamburgers. Harry tends to set up shop at various events selling his world-famous hotdogs and hamburgers. Business has been good to Harry and has allowed him to think about the future. Harry is thinking about expanding to new events and open new stands, but he wants to make sound financial decisions. Before making any decisions, Harry wants to make predictions about his future to ensure that the decision to expand is wise. He enlists our help to assist him with his finances, and has agreed to give us a list of his sales and finances. Throughout this guide, our goal will be to build models to help Harry make sound financial decisions.
 
 This sounds like quite the responsibility, and you may not even know where to start, but that's okay. I think you're up to the challenge. There are lots of unknowns here, so we're going to work through each one and build up our knowledge brick-by-brick until we have the necessary tools to help Harry. Ultimately, we're working towards this goal of building a predictive model for Harry, but throughout this guide we'll work through other problems Harry may have.
 
