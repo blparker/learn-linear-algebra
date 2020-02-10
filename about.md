@@ -16,7 +16,7 @@ initially sparked my interest in revisiting it). Last, by trying to verbalize an
 concepts.
 
 These guides are all written as Jupyter Notebooks and published on Github. Feel free to fork the repository, send a pull request, or create any issues. The repository
-for the guides can be found at <{{ site.github_repo }}>.
+for the guides can be found at [https://github.com/{{ site.github_repo }}](https://github.com/{{ site.github_repo }}).
 
 I've tried to do my best to provide sufficient details and examples. If you find issues in the content or anything isn't clear, or just have suggestions in general,
 feel free to let me let me know. You can reach me by email at <{{ site.email }}>. Thanks!
