@@ -66,6 +66,23 @@ Now that we have some points, let's plot them and draw a line through them. We c
 
 
 
+```python
+plt.figure(figsize=(10, 8))
+axis(xmin=-10, xmax=30, ymin=-20, ymax=70)
+axhline(y=0, color='k', linewidth=0.5)
+axvline(x=0, color='k', linewidth=0.5)
+plt.grid(linestyle='dotted')
+
+scatter([0, 10, 20], [50, 40, 30], color='red')
+plot([-10, 30], [60, 20], 'k-', lw=0.5)
+
+annotate('(0, 50)', xy=(0, 50), xytext=(1, 51), ha='left')
+annotate('(10, 40)', xy=(10, 40), xytext=(11, 41), ha='left')
+annotate('(20, 30)', xy=(21, 31), ha='left')
+
+show()
+```
+
 
 
 ![png](outputs/Linear_Systems_attach_3_image.png)
@@ -96,6 +113,32 @@ Solving geometrically is the most intuitive, so let's start with that.
 Since our system above is just 2 linear equations, we can plot the independent lines and observe the point at which they cross. The X-Y point at which they cross is the value of $d$ and $h$ that satisfy both equations! Below the red line is the equation $d + h = 50$ (same as above), and the blue line is the equation $1.5d + 2h = 85$:
 
 
+
+```python
+plt.figure(figsize=(10, 8))
+axhline(y=0, color='k', linewidth=0.5)
+axvline(x=0, color='k', linewidth=0.5)
+plt.grid(linestyle='dotted')
+
+# Equations of the line
+def e1(x): return -x + 50
+def e2(x): return (-1.5 * x + 85) / 2
+
+# Plot lines, but extend a little to the left and right
+plot([-1, 51], [e1(-1), e1(51)], color='red')
+plot([-1, 58], [e2(-1), e2(58)], color='blue')
+
+# Plot intersection
+scatter(30, 20, marker='o', color='black')
+annotate('The point (30, 20)', xy=(30, 20), xytext=(31, 21), ha='left')
+
+# Create legends
+v1 = leg(color='red', label='d + h = 50')
+v2 = leg(color='blue', label='1.5d + 2h = 85')
+plt.legend(handles=[v1, v2])
+
+show()
+```
 
 
 
