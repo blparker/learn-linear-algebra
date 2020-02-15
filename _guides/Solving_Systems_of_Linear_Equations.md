@@ -152,7 +152,9 @@ $$
 \end{array}\right]
 $$
 
-You can see that in addition to the components of $A$, we've added a vertical line and the components of $\vec{b}$ to the matrix as well. The augmented matrix is sometimes abbreviated $\left[\begin{array}{@{}c|c@{}}A & \vec{b}\end{array}\right]$ for brevity.
+You can see that in addition to the components of $A$, we've added a vertical line and the components of $\vec{b}$ to the matrix as well. For brevity, the augmented matrix is sometimes abbreviated as:
+
+$$\left[\begin{array}{@{}c|c@{}}A & \vec{b}\end{array}\right]$$
 
 The benefit of using an augmented matrix is that you don't need to perform the same row operation twice—it happens in one step. For example, the first row operation performed during elimination above was multiplying the first row by $1.5$. The same can be done for the augmented matrix, which takes care of both sides of the equation:
 
