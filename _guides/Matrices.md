@@ -143,7 +143,7 @@ Again, when adding and subtracting matrices, the matrices **must** be the same s
 
 Given all the operations we've talked about so far, there's been one glaring omission—direct multiplication of matrices and vectors. The process of matrix multiplication is a little more involved, but knowing how to multiply matrices will be incredibly important. Just as multiplying two scalar numbers results in a third scalar number, multiplying two matrices results in a third matrix.
 
-There are a couple of different ways to perform matrix multiplication, but either way, we arrive at the same result. We'll walk through each in detail below.
+There are a three distinct, but ultimately related, ways to perform matrix multiplication, but whichever way, we arrive at the same result. We'll walk through each in detail below.
 
 ### Combination of the columns
 
@@ -186,7 +186,58 @@ AB = C \\[5pt]
 \begin{bmatrix}1 & 0 \\ 2 & 3\end{bmatrix}\begin{bmatrix}2 & 3 \\ 1 & 1\end{bmatrix} = \begin{bmatrix}2 & 3 \\ 7 & 9\end{bmatrix}
 $$
 
-It should be clear after the steps above that the columns in $C$ are linear combinations of the columns of $A$. For example, the first column of $C$ is 2 of the first column of $A$ plus the second column of $A$. The second column of $C$ is 3 of the first column plus 1 of the second column.
+It should be clear after the steps above that the columns in $C$ are linear combinations of the columns of $A$. For example, the first column of $C$ is 2 of the first column of $A$ plus the second column of $A$. The second column of $C$ is 3 of the first column plus 1 of the second column. Notice by multiplying by $B$ on the right of $A$, we are using the columns of $B$ to combine the columns of $A$. Another interpretation is listed below.
+
+### Combination of the rows
+
+This section isn't technically necessary, but demonstrates an interesting property of matrix multiplication. We showed above that multiplying a matrix $A$ and a matrix $B$, the columns in $B$ are effectively combining the columns in $A$ to produce the columns in a matrix $C$:
+
+$$
+\qquad\qquad column\ 1 \qquad\qquad\qquad column\ 2 \\[5pt]
+\begin{bmatrix}1 & 0 \\ 2 & 3\end{bmatrix}
+\begin{bmatrix}2 & 3 \\ 1 & 1\end{bmatrix} =
+\begin{bmatrix}
+2 * \begin{bmatrix}1 \\ 2\end{bmatrix} + 1 * \begin{bmatrix}0 \\ 3\end{bmatrix}
+& \enspace\enspace
+3 * \begin{bmatrix}1 \\ 2\end{bmatrix} + 1 * \begin{bmatrix}0 \\ 3\end{bmatrix}
+\end{bmatrix} =
+\begin{bmatrix}2 & 3 \\ 7 & 9\end{bmatrix}
+$$
+
+A similar, but different view of matrix multiplication is viewing it as a combination of the rows. Above, it was shown that by multiplying $B$ on the right of $A$, the columns of $C$ can be viewed as a combination of the _columns_ of $A$. If instead, we view it as $A$ multiplying $B$ from the left, we can view multiplication as a combination of the _rows_ of $B$. For example, given the same multiplication:
+
+$$
+AB = C \\[5pt]
+\begin{bmatrix}1 & 0 \\ 2 & 3\end{bmatrix}\begin{bmatrix}2 & 3 \\ 1 & 1\end{bmatrix} = \begin{bmatrix} & \\ & \end{bmatrix}
+$$
+
+From this rows-based perspective, by multiplying $A$ and $B$ we are using the rows of $A$ to combine the rows of $B$ to produce the rows in $C$. Let's see an example. To start, we take the first row of $A$ and use that to combine the rows of $B$ to produce the first row in $C$:
+
+$$
+\begin{bmatrix}1 & 0 \\ &\end{bmatrix}
+\begin{bmatrix}2 & 3 \\ 1 & 1\end{bmatrix} =
+1 * \begin{bmatrix}2 & 3\end{bmatrix} + 0 * \begin{bmatrix}1 & 1\end{bmatrix} = 
+\begin{bmatrix}2 & 3 \\ &\end{bmatrix}
+$$
+
+Same for the second row of $A$:
+
+$$
+\begin{bmatrix}& \\ 2 & 3\end{bmatrix}
+\begin{bmatrix}2 & 3 \\ 1 & 1\end{bmatrix} =
+2 * \begin{bmatrix}2 & 3\end{bmatrix} + 3 * \begin{bmatrix}1 & 1\end{bmatrix} = 
+\begin{bmatrix}& \\ 7 & 9\end{bmatrix}
+$$
+
+Arriving at the following result:
+
+$$
+\begin{bmatrix}1 & 0 \\ 2 & 3\end{bmatrix}
+\begin{bmatrix}2 & 3 \\ 1 & 1\end{bmatrix} =
+\begin{bmatrix}2 & 3 \\ 7 & 9\end{bmatrix}
+$$
+
+Ultimately results in the same thing, but they are different interpretations. These different interpretations aren't intended to confuse you, it's simply to demonstrate that the rows and columns are intimately connected with the rows and columns of the matrices being multiplied. To reiterate, given a matrix $D$, if you multiply a matrix $F$ on the right side of $D$, $DF$, you are combining the columns of $D$ using the columns of $F$. If you multiply a matrix $G$ on the left side of $D$, $GD$, you are combining the rows of $D$ using the rows of $G$.
 
 ### Component-by-component
 
@@ -278,8 +329,8 @@ Compared to the column-based method, this is a lower-level operation than that o
 
 Recall that when doing matrix addition and subtraction, the matrices **must** be the same size (i.e., both must be $MxN$). So far, the examples of matrix multiplication we've seen have all been with matrices of the same size. However, it's possible to multiply different sized matrices. When multiplying $AB$, the only requirement is that the number of columns in $A$ must match the number of rows in $B$. That is, a matrix with size $M x N$ can be multiplied with another matrix of size $N x P$. The size of the resulting matrix will be $M x P$. Thinking about it, it should make sense—since the number of components in the columns of $B$ dictate the combination of the columns of $A$, it makes sense that the number of rows in the result matrix will equal the number of rows in $A$ and the number of columns of the result matrix will equal the number of columns in $B$. There's a useful mental image that you can use when determining if the multiplication is legal and what the result matrix's size will be:
 
-<span style="display: none">(outputs/Matrices_attach_9_image.png)</span>
-<img src="outputs/Matrices_attach_9_image.png" width="400" alt="">
+<span style="display: none">(outputs/Matrices_attach_10_image.png)</span>
+<img src="outputs/Matrices_attach_10_image.png" width="400" alt="">
 <figcaption style="display: block; text-align:center;">(<a href="http://www.coolmath.com/algebra/24-matrices/04-multiplying-matrices-01">image source</a>)</figcaption>
 
 For example, the following multiplication is a legal matrix multiplication:
@@ -430,7 +481,7 @@ It's visualized as:
 
 
 
-![png](outputs/Matrices_attach_15_image.png)
+![png](outputs/Matrices_attach_16_image.png)
 
 
 Let's say we're interested in squashing this vector down to the X-axis and stretching it 3 times its length. We can view these as 2 separate operations. To squash this vector, we simply need to remove its Y-component. It's then a matter of multiplying by 3 to stretch it. We can combine these 2 operations into one matrix multiplication by multiplying the vector by the following matrix:
@@ -445,52 +496,8 @@ The result of this multiplication is the desired transformation:
 
 
 
-![png](outputs/Matrices_attach_17_image.png)
+![png](outputs/Matrices_attach_18_image.png)
 
-
-## Matrix multiplication as a combination of rows (supplemental)
-
-This section isn't necessary, but demonstrates an interesting property of matrix multiplication. We showed above that multiplying a matrix $A$ and a matrix $B$, the columns in $B$ are effectively combining the columns in $A$ to produce the columns in a matrix $C$:
-
-$$
-\qquad\qquad column\ 1 \qquad\qquad\qquad column\ 2 \\[5pt]
-\begin{bmatrix}1 & 0 \\ 2 & 3\end{bmatrix}
-\begin{bmatrix}2 & 3 \\ 1 & 1\end{bmatrix} =
-\begin{bmatrix}
-2 * \begin{bmatrix}1 \\ 2\end{bmatrix} + 1 * \begin{bmatrix}0 \\ 3\end{bmatrix}
-& \enspace\enspace
-3 * \begin{bmatrix}1 \\ 2\end{bmatrix} + 1 * \begin{bmatrix}0 \\ 3\end{bmatrix}
-\end{bmatrix} =
-\begin{bmatrix}2 & 3 \\ 7 & 9\end{bmatrix}
-$$
-
-However, there is an alternative way to view matrix multiplication. An alternative way to view matrix multiplication is as a combination of the rows of $B$. That is, by multiplying $A$ and $B$, we are using the rows of $A$ to combine the rows of $B$ to produce the rows in $C$. Let's see an example. First, we take the first row of $A$ and use that to combine the rows of $B$ to produce the first row in $C$:
-
-$$
-\begin{bmatrix}1 & 0 \\ &\end{bmatrix}
-\begin{bmatrix}2 & 3 \\ 1 & 1\end{bmatrix} =
-1 * \begin{bmatrix}2 & 3\end{bmatrix} + 0 * \begin{bmatrix}1 & 1\end{bmatrix} = 
-\begin{bmatrix}2 & 3 \\ &\end{bmatrix}
-$$
-
-Same for the second row of $A$:
-
-$$
-\begin{bmatrix}& \\ 2 & 3\end{bmatrix}
-\begin{bmatrix}2 & 3 \\ 1 & 1\end{bmatrix} =
-2 * \begin{bmatrix}2 & 3\end{bmatrix} + 3 * \begin{bmatrix}1 & 1\end{bmatrix} = 
-\begin{bmatrix}& \\ 7 & 9\end{bmatrix}
-$$
-
-Arriving at the following result:
-
-$$
-\begin{bmatrix}1 & 0 \\ 2 & 3\end{bmatrix}
-\begin{bmatrix}2 & 3 \\ 1 & 1\end{bmatrix} =
-\begin{bmatrix}2 & 3 \\ 7 & 9\end{bmatrix}
-$$
-
-Ultimately results in the same thing, but different interpretations. These different interpretations aren't intended to confuse you, it's simply to demonstrate that the rows and columns are intimately connected with the rows and columns of the matrices being multiplied.
 
 ## Putting all the code together
 

@@ -37,7 +37,7 @@ A benefit of this thinking is that it allows us to visualize vector by viewing t
 
 $$\begin{bmatrix}2 \\ 1\end{bmatrix}$$
 
-Since the vector above has 2 components, we can visualize it in the X-Y plane by allowing the first component, `2`, to be the X-coordinate and the second component, `1`, to be the Y-coordinate:
+Since the vector above has 2 components, we can visualize it in the X-Y plane by allowing the first component, $2$, to be the X-coordinate and the second component, $1$, to be the Y-coordinate:
 
 
 
